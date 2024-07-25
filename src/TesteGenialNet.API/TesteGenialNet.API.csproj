@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesteGenialNet.Business\TesteGenialNet.Business.csproj" />
+    <ProjectReference Include="..\TesteGenialNet.Data\TesteGenialNet.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+
+</Project>
