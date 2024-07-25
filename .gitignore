@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/TesteGenialNet.API/bin
+/src/TesteGenialNet.API/obj
+/src/TesteGenialNet.Business/bin
+/src/TesteGenialNet.Business/obj
+/src/TesteGenialNet.Data/bin
+/src/TesteGenialNet.Data/obj
