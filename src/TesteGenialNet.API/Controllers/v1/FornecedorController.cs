@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using TesteGenialNet.Business.Commands.Fornecedores;
 using TesteGenialNet.Business.Helpers;
 using TesteGenialNet.Business.Interfaces;
-using TesteGenialNet.Business.Interfaces.Querys;
+using TesteGenialNet.Business.Interfaces.Queries;
 using TesteGenialNet.Business.Interop.ViewModels;
 using TesteGenialNet.Business.Resources;
 using TesteGenialNet.Business.Services;
@@ -18,14 +18,14 @@ namespace TesteGenialNet.API.Controllers.v1
     {
         private readonly IMediator _mediator;
         private ConsultaCepService _consultaCepService;
-        private readonly IFornecedorQuery _fornecedorQuery;
+        private readonly IFornecedorQuerie _fornecedorQuery;
 
         public FornecedorController(
             INotificator notificator,
             IMapper mapper,
             IMediator mediator,
             ConsultaCepService consultaCepService,
-            IFornecedorQuery fornecedorQuery) : base(notificator, mapper)
+            IFornecedorQuerie fornecedorQuery) : base(notificator, mapper)
         {
             _mediator = mediator;
             _consultaCepService = consultaCepService;

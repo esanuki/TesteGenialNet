@@ -2,17 +2,17 @@
 using System.Threading.Tasks;
 using TesteGenialNet.Business.Dtos;
 using TesteGenialNet.Business.Interfaces;
-using TesteGenialNet.Business.Interfaces.Querys;
+using TesteGenialNet.Business.Interfaces.Queries;
 using TesteGenialNet.Business.Interfaces.Repositorys;
 
-namespace TesteGenialNet.Business.Querys
+namespace TesteGenialNet.API.Queries
 {
-    public class FornecedorQuery : IFornecedorQuery
+    public class FornecedorQuerie : IFornecedorQuerie
     {
         private readonly IFornecedorRepository _repository;
         private readonly INotificator _notificator;
 
-        public FornecedorQuery(IFornecedorRepository repository, INotificator notificator)
+        public FornecedorQuerie(IFornecedorRepository repository, INotificator notificator)
         {
             _repository = repository;
             _notificator = notificator;

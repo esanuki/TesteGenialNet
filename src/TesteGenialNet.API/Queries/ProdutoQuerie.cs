@@ -1,23 +1,20 @@
 ﻿using AutoMapper;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using TesteGenialNet.Business.Interfaces;
-using TesteGenialNet.Business.Interfaces.Querys;
+using TesteGenialNet.Business.Interfaces.Queries;
 using TesteGenialNet.Business.Interfaces.Repositorys;
 using TesteGenialNet.Business.Interop.Dtos;
 
-namespace TesteGenialNet.Business.Querys
+namespace TesteGenialNet.API.Queries
 {
-    public class ProdutoQuery : IProdutoQuery
+    public class ProdutoQuerie : IProdutoQuerie
     {
         private readonly IProdutoRepository _repository;
         private readonly IMapper _mapper;
         private readonly INotificator _notificator;
 
-        public ProdutoQuery(
+        public ProdutoQuerie(
             IProdutoRepository repository,
             IMapper mapper,
             INotificator notificator)
@@ -43,9 +40,9 @@ namespace TesteGenialNet.Business.Querys
                 _notificator.NoticationErrors("Produto nao encontrado!");
                 return null;
             }
-                
 
-            return _mapper.Map<ProdutoDto>(result); 
+
+            return _mapper.Map<ProdutoDto>(result);
         }
     }
 }

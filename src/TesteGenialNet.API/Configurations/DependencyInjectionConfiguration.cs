@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using TesteGenialNet.Business.Interfaces.Querys;
 using TesteGenialNet.Business.Interfaces.Repositorys;
 using TesteGenialNet.Business.Interfaces;
 using TesteGenialNet.Business.Notificator;
-using TesteGenialNet.Business.Querys;
 using TesteGenialNet.Data.Repositorys;
+using TesteGenialNet.API.Queries;
+using TesteGenialNet.Business.Interfaces.Queries;
 
 namespace TesteGenialNet.API.Configurations
 {
@@ -16,8 +16,8 @@ namespace TesteGenialNet.API.Configurations
             builder.Services.AddScoped<IFornecedorRepository, FornecedorRepository>();
             builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
             builder.Services.AddScoped<IProdutoFornecedorRepository, ProdutoFonecedorRepository>();
-            builder.Services.AddScoped<IFornecedorQuery, FornecedorQuery>();
-            builder.Services.AddScoped<IProdutoQuery, ProdutoQuery>();
+            builder.Services.AddScoped<IFornecedorQuerie, FornecedorQuerie>();
+            builder.Services.AddScoped<IProdutoQuerie, ProdutoQuerie>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<INotificator, Notificator>();
 

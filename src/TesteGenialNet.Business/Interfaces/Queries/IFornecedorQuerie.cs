@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using TesteGenialNet.Business.Dtos;
 
-namespace TesteGenialNet.Business.Interfaces.Querys
+namespace TesteGenialNet.Business.Interfaces.Queries
 {
-    public interface IFornecedorQuery
+    public interface IFornecedorQuerie
     {
         Task<IList<FornecedorDto>> GetAll();
         Task<FornecedorDto> GetById(int id);

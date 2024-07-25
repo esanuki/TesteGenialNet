@@ -5,9 +5,9 @@ using TesteGenialNet.Business.Interfaces;
 using TesteGenialNet.Business.Helpers;
 using MediatR;
 using TesteGenialNet.Business.Resources;
-using TesteGenialNet.Business.Interfaces.Querys;
 using TesteGenialNet.Business.Interop.ViewModels;
 using TesteGenialNet.Business.Commands.Produtos;
+using TesteGenialNet.Business.Interfaces.Queries;
 
 namespace TesteGenialNet.API.Controllers.v1
 {
@@ -15,13 +15,13 @@ namespace TesteGenialNet.API.Controllers.v1
     public class ProdutoController : MainController
     {
         private IMediator _mediator;
-        private IProdutoQuery _produtoQuery;
+        private IProdutoQuerie _produtoQuery;
 
         public ProdutoController(
             INotificator notificator,
             IMapper mapper,
             IMediator mediator,
-            IProdutoQuery produtoQuery) : base(notificator, mapper)
+            IProdutoQuerie produtoQuery) : base(notificator, mapper)
         {
             _mediator = mediator;
             _produtoQuery = produtoQuery;

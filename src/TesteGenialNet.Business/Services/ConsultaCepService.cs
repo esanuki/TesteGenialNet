@@ -20,6 +20,9 @@ namespace TesteGenialNet.Business.Services
             {
                 var response = await _httpClient.GetStringAsync($"/ws/{cep}/json/");
 
+                if (response.Contains("erro"))
+                    return string.Empty;
+
                 var endereco = JsonConvert.DeserializeObject<Endereco>(response);
 
                 return endereco != null ? endereco.ToString() : "";
